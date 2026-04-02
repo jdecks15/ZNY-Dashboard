@@ -6314,7 +6314,7 @@ async function searchRoutes() {
   document.getElementById('rt-filed-tbody').innerHTML = '';
 
   try {
-    var resp = await fetch('/api/routes?origin=' + origin + '&dest=' + dest);
+    var resp = await fetch('/.netlify/functions/routes?origin=' + origin + '&dest=' + dest);
     if (!resp.ok) {
       throw new Error('Function returned ' + resp.status + ' — check Netlify logs');
     }
